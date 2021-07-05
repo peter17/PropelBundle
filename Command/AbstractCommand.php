@@ -51,9 +51,9 @@ abstract class AbstractCommand extends Command
 
     use FormattingHelpers;
 
-    public function __construct(KernelInterface $karnel, $name = null)
+    public function __construct(KernelInterface $kernel, $name = null)
     {
-        $this->container = $karnel->getContainer();
+        $this->container = $kernel->getContainer();
 
         parent::__construct($name);
     }
